@@ -99,6 +99,7 @@ def DFT_basic_experiment():
 
         # 平移性
         offset_img = ImgOffset(img, img_array.shape[0] // 2, img_array.shape[1] // 2)
+        offset_img.show()
         offset_img_array = np.array(offset_img)
         offset_DFT_result = DFT2(offset_img_array)
         frequency_spectrum(offset_DFT_result, pic_name, 'offset')
